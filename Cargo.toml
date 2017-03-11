@@ -1,0 +1,7 @@
+[package]
+name = "prim"
+version = "0.1.0"
+authors = ["***Phirstname*** ***Lastname*** <***redacted.email@redacted.nope***>"]
+
+[dependencies]
+itertools = "0.5"
