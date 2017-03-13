@@ -1,16 +1,14 @@
 extern crate itertools;
 
-
 mod attributes;
-mod builder;
-pub mod generators;
+mod geometry_generator;
+mod builder_traits;
+mod vertex_format;
+mod geometry_builder;
 
+mod generators;
 
-pub use self::builder::GeometryBuilder;
-use generators::quad::QuadGeometryGenerator;
+pub use attributes::*;
+pub use builder_traits::*;
 
-
-pub fn quad() -> GeometryBuilder<QuadGeometryGenerator>
-{
-    GeometryBuilder::new(QuadGeometryGenerator { })
-}
+pub use generators::quad::QuadBuilder;
