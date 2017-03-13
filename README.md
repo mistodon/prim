@@ -37,3 +37,33 @@ let vertices: Vec<MyVertex> = shape()
     .map(|(pos, uv)| MyVertex { pos: pos, uv: uv })
     .collect();
 ```
+
+```rust
+// Primitives
+fn quad()
+    .with_center(center: vec3)
+    .with_forwards_and_up(normal: vec3, up: vec3)
+    .with_size(size: vec2)
+    .with_normals()
+    .with_uvs()
+    .with_indices()
+    .into_iter()
+    .collect();
+
+fn box()
+    .with_center(center: vec3)
+    .with_forwards_and_up(forwards: vec3, up: vec3)
+    .with_size(size: vec3)
+    ...
+
+fn fan(edges: u64)
+    .with_center(center: vec3)
+    .with_forwards_and_up(forwards: vec3, up: vec3)
+    .with_radius(radius: f32)
+    ...
+
+fn lines(points: Iterator<vec3>)
+    .with_thickness(thickness: f32)
+    .with_view_direction(view_dir: vec3)
+    ...
+```
